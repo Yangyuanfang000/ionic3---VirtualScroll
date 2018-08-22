@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+
+    <!--显示列表overflow-scroll="true"-->
+    <ion-list [virtualScroll]="lists" approxItemHeight="132px">
+        <ion-item *virtualItem="let item">
+          <h3 style="padding: 10px;"> {{ item.id }}</h3>
+          <p style="padding: 30px 10px">{{ item.body }}</p>
+        </ion-item>
+    </ion-list>
+
+  <!--上拉加载更多-->
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+  <!--下拉刷新-->
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+</ion-content>
