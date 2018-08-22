@@ -8,12 +8,10 @@ To use this template, either create a new ionic project using the ionic node.js 
 
 ### With the Ionic CLI:
 
-Then, to run it, cd into `myTabs` and run:
+克隆该项目到到电脑上，打开终端进入该项目后运行一下命令:
 
 ```bash
 $ npm i
 $ ionic serve
 ```
-
-Substitute ios for android if not on a Mac.
 
